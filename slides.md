@@ -81,7 +81,7 @@ A 30-minute debugging session for web developers who already ship UI. The screen
 - Editor: [CodeSandbox 031, modal tab cycle and inert](https://codesandbox.io/p/sandbox/031-tab-cycle-within-modal-first-and-last-focusable-inert-jgcpws)
 - Course section: Focus trap in modals (WCAG 2.1.2 No Keyboard Trap)
 - On the page: button "Delete account", dialog titled "Confirm account deletion", buttons Cancel and Delete
-- Open path in the example: save nothing yet, set `appRoot.inert = true`, `dialog.showModal()`, move focus to the heading (`tabindex="-1"`)
+- Open path in the example: save nothing yet, set `appRoot.inert = true`, `dialog.show()`, move focus to the heading (`tabindex="-1"`)
 - Show the working case: Tab and Shift+Tab stay inside the dialog. The page behind it is inert. Escape and the close button leave
 - Break it: in the open handler, leave `appRoot.inert` false. Open the dialog and Tab. Focus walks into the page behind the dialog
 - A focus trap inside an open dialog is the requirement. Focus that escapes into the background is the bug. A trap with no Escape and no reachable close button is the other bug
